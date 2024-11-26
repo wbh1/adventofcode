@@ -1,4 +1,4 @@
-# Advent of Code 2023-
+# Advent of Code 2023-????
 
 I'm using Python because I don't have the time to use Go :(
 
@@ -41,3 +41,15 @@ I use pytest for validating that my solution matches the expected output from th
 ```console
 ❯ uv run pytest adventofcode/2023/test_day1.py
 ```
+
+## Prior Years
+
+I'm trying to use just 1 repo going forward since I found a structure that works for me and is re-usable across years.
+
+My prior years are available in other repos:
+
+- [2018](https://github.com/wbh1/advent-of-code2018)
+- [2019](https://github.com/wbh1/adventofcode2019)
+- [2020](https://github.com/wbh1/adventofcode2020)
+- [2021](https://github.com/wbh1/adventofcode2021)
+- [2022](https://github.com/wbh2/adventofcode2022)
