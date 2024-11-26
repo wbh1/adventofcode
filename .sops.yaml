@@ -1,0 +1,3 @@
+creation_rules:
+  - path_regex: 'inputs/.*\.txt'
+    age: 'age1wqerhcqh9z2j6entka58p473zta7hyrye7vrdqpn0wnf0ty7r3us26dmlp'

@@ -1,0 +1,32 @@
+[tasks."input:decrypt"]
+description = "Decrypt all secret files"
+run = """
+#!/bin/sh
+
+SECRETS=$(fd ".*\\.secret\\.txt" inputs/)
+
+for s in $SECRETS; do
+    OUT=$(echo "$s" | sed "s/\\(inputs\\/.*\\)\\.secret\\.txt/\\1.txt/");
+    echo "OUT: $OUT";
+    sops -d "$s" > "$OUT";
+done
+"""
+
+[tasks."input:encrypt"]
+description = "Encrypt all non-secret files"
+run = """
+#!/bin/sh
+
+INPUTS=$(fd -I "day\\d+.txt" inputs/)
+
+for s in $INPUTS; do
+    OUT=$(echo "$s" | sed "s/\\(inputs\\/.*\\)\\.txt/\\1.secret.txt/");
+    echo "OUT: $OUT";
+    sops -e "$s" > "$OUT";
+done
+"""
+
+[tasks.input]
+depends = ["input:*"]
+description = "Encrypt and decrypt all input files"
+
