@@ -1,4 +1,4 @@
-from day2 import Day2
+from adventofcode._2023.day2 import Day2
 import pytest
 
 

@@ -1,4 +1,4 @@
-from day7 import Day7
+from adventofcode._2023.day7 import Day7
 
 
 data = """32T3K 765

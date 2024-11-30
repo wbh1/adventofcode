@@ -1,4 +1,4 @@
-from day15 import Day15
+from adventofcode._2023.day15 import Day15
 
 data = """rn=1,cm-,qp=3,cm=2,qp-,pc=4,ot=9,ab=5,pc-,pc=6,ot=7""".splitlines()
 

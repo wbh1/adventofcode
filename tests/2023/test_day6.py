@@ -1,4 +1,4 @@
-from day6 import Day6
+from adventofcode._2023.day6 import Day6
 
 data = """Time:      7  15   30
 Distance:  9  40  200""".splitlines()

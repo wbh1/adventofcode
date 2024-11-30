@@ -1,4 +1,4 @@
-from day5 import Day5, Seed
+from adventofcode._2023.day5 import Day5, Seed
 
 
 data = """seeds: 79 14 55 13

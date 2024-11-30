@@ -1,4 +1,4 @@
-from day3 import Day3
+from adventofcode._2023.day3 import Day3
 
 data = """467..114..
 ...*......

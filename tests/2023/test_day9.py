@@ -1,4 +1,4 @@
-from day9 import Day9
+from adventofcode._2023.day9 import Day9
 
 data = """0 3 6 9 12 15
 1 3 6 10 15 21

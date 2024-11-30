@@ -1,4 +1,4 @@
-from day11 import Day11
+from adventofcode._2023.day11 import Day11
 from itertools import combinations
 
 

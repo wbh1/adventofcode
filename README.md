@@ -36,10 +36,10 @@ Encrypt all non-secret files
 
 ## Testing
 
-I use pytest for validating that my solution matches the expected output from the sample data in each problem. To run a test:
+I use pytest for validating that my solution matches the expected output from the sample data in each problem. To run a test using a task defined in `mise`:
 
 ```console
-❯ uv run pytest adventofcode/2023/test_day1.py
+❯ mise run test --year 2023 1
 ```
 
 ## Prior Years

@@ -1,4 +1,4 @@
-from day13 import Day13
+from adventofcode._2023.day13 import Day13
 
 
 data = """#.##..##.

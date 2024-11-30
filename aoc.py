@@ -31,7 +31,7 @@ input_dir = args.input or os.path.join("inputs", args.year)
 os.environ["AOC_INPUT_DIR"] = input_dir
 
 day = getattr(
-    import_module(f"adventofcode.{args.year}.day{args.day}"), f"Day{args.day}"
+    import_module(f"adventofcode._{args.year}.day{args.day}"), f"Day{args.day}"
 )()
 
 day.solve()

@@ -1,4 +1,4 @@
-from day14 import Day14
+from adventofcode._2023.day14 import Day14
 import pytest
 
 data = """O....#....

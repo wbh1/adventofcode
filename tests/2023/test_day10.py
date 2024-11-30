@@ -1,4 +1,4 @@
-from day10 import Day10
+from adventofcode._2023.day10 import Day10
 
 
 def test_simple_loop():

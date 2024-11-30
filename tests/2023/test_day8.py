@@ -1,4 +1,4 @@
-from day8 import Day8
+from adventofcode._2023.day8 import Day8
 
 data = """RL
 

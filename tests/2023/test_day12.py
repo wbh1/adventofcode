@@ -1,5 +1,5 @@
 import pytest
-from day12 import matches, Day12
+from adventofcode._2023.day12 import matches, Day12
 
 data = """???.### 1,1,3
 .??..??...?##. 1,1,3
