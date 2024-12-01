@@ -27,7 +27,7 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-input_dir = args.input or os.path.join("inputs", args.year)
+input_dir = args.input or os.path.join("inputs", str(args.year))
 os.environ["AOC_INPUT_DIR"] = input_dir
 
 day = getattr(
