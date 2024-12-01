@@ -21,8 +21,12 @@ INPUTS=$(fd -I "day\\d+.txt" inputs/)
 
 for s in $INPUTS; do
     OUT=$(echo "$s" | sed "s/\\(inputs\\/.*\\)\\.txt/\\1.secret.txt/");
-    echo "OUT: $OUT";
-    sops -e "$s" > "$OUT";
+    if [ -f $OUT ]; then
+        echo "$OUT already exists.";
+    else
+        echo "OUT: Writing encrypted file to $OUT";
+        sops -e "$s" > "$OUT";
+    fi
 done
 """
 
