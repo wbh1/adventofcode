@@ -15,4 +15,4 @@ def test_part1():
 
 
 def test_part2():
-    assert d.part2() == 5
+    assert d.part2() == 4
