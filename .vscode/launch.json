@@ -1,0 +1,22 @@
+{
+    // See: https://github.com/mfussenegger/nvim-dap-python?tab=readme-ov-file#custom-configuration
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "aoc.py",
+            "type": "python",
+            "request": "launch",
+            "program": "aoc.py",
+            "args": ["${input:day}"],
+            "justMyCode": false
+        }
+    ],
+    "inputs": [
+        {
+          "id": "day",
+          "type": "promptString",
+          "description": "AoC day to run"
+        }
+    ]
+}
