@@ -13,3 +13,4 @@ dev-dependencies = [
     "black>=24.10.0",
     "pytest>=8.3.3",
 ]
+[tool.pytest]
