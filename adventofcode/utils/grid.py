@@ -7,6 +7,9 @@ from typing import Tuple, Iterable
 DR = [0, 0, -1, 1, -1, -1, 1, 1]
 DC = [1, -1, 0, 0, -1, 1, -1, 1]
 
+# Tuple in (y,x) form
+UP, DOWN, LEFT, RIGHT = (-1, 0), (1, 0), (0, -1), (0, 1)
+
 
 def deltas_2d() -> Iterable[Tuple[int, int]]:
-    return zip(DR, DC)
+  return zip(DR, DC)
