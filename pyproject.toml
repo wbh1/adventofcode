@@ -13,4 +13,12 @@ dev-dependencies = [
     "black>=24.10.0",
     "pytest>=8.3.3",
 ]
+
 [tool.pytest]
+
+[tool.ruff]
+line-length = 100
+indent-width = 2
+
+[tool.ruff.format]
+indent-style = "space"
