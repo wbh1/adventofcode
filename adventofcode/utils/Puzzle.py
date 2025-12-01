@@ -1,10 +1,12 @@
+from abc import abstractmethod
 import os
 
 
 class Puzzle:
     day = 0
 
-    def __init__(self, data=None):
+    def __init__(self, data=None, debug=False):
+        self.debug = debug
         if data is not None:
             self.data = data
             return
@@ -12,11 +14,17 @@ class Puzzle:
         with open(os.path.join(input_dir, f"day{self.day}.txt")) as f:
             self.data = f.read().splitlines()
 
-    def part1(self) -> int:
-        pass
+    def log(self, msg: str):
+        if self.debug:
+            print(msg)
 
+    @abstractmethod
+    def part1(self) -> int:
+        raise NotImplementedError()
+
+    @abstractmethod
     def part2(self) -> int:
-        pass
+        raise NotImplementedError()
 
     def solve(self):
         print("Part 1:", self.part1())

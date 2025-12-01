@@ -25,6 +25,12 @@ parser.add_argument(
     "--input",
     help='directory with inputs for the year (named like "day10.txt"). Defaults to inputs/{year}/',
 )
+parser.add_argument(
+    "-v",
+    "--debug",
+    help='enable debug logging',
+    action="store_true"
+)
 args = parser.parse_args()
 
 input_dir = args.input or os.path.join("inputs", str(args.year))
@@ -32,6 +38,6 @@ os.environ["AOC_INPUT_DIR"] = input_dir
 
 day = getattr(
     import_module(f"adventofcode._{args.year}.day{args.day}"), f"Day{args.day}"
-)()
+)(debug=args.debug)
 
 day.solve()
