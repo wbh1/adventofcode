@@ -36,8 +36,16 @@ description = "Encrypt and decrypt all input files"
 
 [tasks.test]
 description = "Run pytest for specified day"
-run = 'uv run python -m pytest tests/{{option(name="year", default="2025")}}/test_day{{arg(name="day")}}.py'
+usage = '''
+arg "<day>" help="What day to test"
+flag "--year <year>" help="What year to test" default="2025"
+'''
+run = 'uv run python -m pytest tests/${usage_year?}/test_day${usage_day?}.py'
 
 [tasks.gen]
 description = "Generate boilerplate code and test for a given day"
-run = 'uv run python .hack/gen.py --year {{option(name="year")}} {{arg(name="day")}}'
+usage = '''
+arg "<day>" help="What day to generate code file and test file for"
+flag "--year <year>" help="What year to generate the files for" default="2025"
+'''
+run = 'uv run python .hack/gen.py --year ${usage_year?} ${usage_day?}'
