@@ -27,7 +27,6 @@ class Day2(Puzzle):
         self.log(f"range={r}")
         start, end = r.split("-")
         for x in range(int(start), int(end)+1):
-          invalid_ids_num = set()
           x = str(x)
           for part_len in range(1,len(x)//2+1):
               part = x[:part_len]
@@ -35,6 +34,6 @@ class Day2(Puzzle):
               if len(x) % part_len == 0:
                   # Check if multiplying the substring N times results in the original number
                   if part * (len(x)//part_len) == x:
-                      invalid_ids_num.add(int(x))
-          invalid_ids.extend(invalid_ids_num)
+                    invalid_ids.append(int(x))
+                    break
       return sum(invalid_ids)
