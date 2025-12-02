@@ -39,6 +39,7 @@ description = "Run pytest for specified day"
 usage = '''
 arg "<day>" help="What day to test"
 flag "--year <year>" help="What year to test" default="2025"
+complete "year" run="ls ./tests"
 '''
 run = 'uv run python -m pytest tests/${usage_year?}/test_day${usage_day?}.py'
 
@@ -47,5 +48,15 @@ description = "Generate boilerplate code and test for a given day"
 usage = '''
 arg "<day>" help="What day to generate code file and test file for"
 flag "--year <year>" help="What year to generate the files for" default="2025"
+complete "year" run="ls ./tests"
 '''
 run = 'uv run python .hack/gen.py --year ${usage_year?} ${usage_day?}'
+
+[tasks.aoc]
+description = "Run an AoC solution"
+usage = '''
+arg "<day>" help="What day to run"
+flag "--year <year>" help="What year the solution is in" default="2025"
+complete "year" run="ls ./tests"
+'''
+run = 'uv run aoc.py -y ${usage_year?} ${usage_day?}'
