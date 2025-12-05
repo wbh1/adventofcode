@@ -13,22 +13,8 @@ class Day5(Puzzle):
     self.ingredients = self.data[split + 1 :]
 
   def part1(self) -> int:
-    self.log(f"Ingredient ranges: {self.ingredient_ranges}")
-    self.log(f"Ingredients: {self.ingredients}")
-
-    results: List[int] = []
-    for i in self.ingredients:
-      fresh = False
-      for r in self.ingredient_ranges:
-        low, high = map(int, r.split("-", 1))
-        fresh = low <= int(i) <= high
-        if fresh:
-          break
-
-      if fresh:
-        results.append(int(i))
-
-    return len(results)
+    ranges = [(int(a), int(b)) for a, b in (r.split("-", 1) for r in self.ingredient_ranges if r)]
+    return sum(1 for v in map(int, self.ingredients) if any(lo <= v <= hi for lo, hi in ranges))
 
   def flatten_ranges(self):
     """Combine ranges to the maximum possible extent"""
